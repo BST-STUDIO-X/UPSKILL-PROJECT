@@ -1,50 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/signup.css" type="text/css">
-    <title>Sign Up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BingeBuddy | Stream Your Favorite Shows, Movies and Drama With Family and Friends</title>
+
+  <!-- CUSTOM CSS-->
+   <link rel="stylesheet" type="text/css" href="styles/index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Create Account</h1>
-        
-        <div id="successMessage" class="success-message">
-            Account created successfully! A verification email has been sent. Please check your inbox.
-        </div>
-        
-        <form id="signupForm">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" required>
-                <div id="usernameError" class="error-message">Username must be at least 4 characters</div>
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" required>
-                <div id="passwordError" class="error-message">
-                    Password must be at least 8 characters and contain at least one number
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" required>
-                <div id="confirmPasswordError" class="error-message">Passwords do not match</div>
-            </div>
-            
-            <button type="submit" id="signupButton">Sign Up</button>
-            <div id="successMessage"></div>
-        </form>
-        
-        <div class="login-link">
-            Already have an account? <a href="login.html">Log in</a>
-        </div>
-    </div>
+  <header id="header">
+    <a href="index.html"><img src="images/brandlogo.svg" alt="BingeBuddy" id="brand"></a>
+    <nav id="navLinks">
+      <ul>
+        <li><a href="signup.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><button>Watch Now!</li>
+      </ul>
+    </nav>
+  </header>
 
-    <script src="script.js"></script>
+  <main>
+    <section id="homePage" class="page">
+      <div id="container">
+      <div id="title">
+        <h1>WATCH MOVIES TOGETHER,<br>
+        ANYWHERE</h1>
+      </div><!-- #title -->
+      <div class="article">
+        <p>BingeBuddy is your online public cinema. Join live <br> screenings, chat with other viewers and experience <br>files as a shared event.</p></div>
+      <div><!-- .article -->
+        <button class="how-it-works">How it works</button>
+        <button class="watch-now">Watch Now!</button>
+      </div>
+    </div><!-- #container -->
+    </section><!-- #homePage -->
+
+    <section class="sites">
+      <img src="images/logo-disney.svg" alt="Disney" id="disney">
+      <img src="images/logo-hulu.svg" alt="Hulu" id="hulu">
+      <img src="images/logo-youtube.svg" alt="Youtube" id="youtube">
+      <img src="images/logo-netflix.svg" alt="Netflix" id="netflix">
+      <img src="images/logo-prime.svg" alt="Prime videos" id="prime">
+    </section><!-- sites -->
+
+    <section class="page">
+      <div>
+        <div class="title">How it Works</div>
+        <div id="theFlow">
+          <div class="process">
+            <div class="flow-count">1</div>
+            <h2>Pick a Screening</h2>
+            <p>Browse the public <br>virtual cinema <br> schedule.</p>
+          </div><!-- .process -->
+
+          <div class="process">
+            <div class="flow-count">2</div>
+            <h2>Join the Room</h2>
+            <p>Click to enter the <br>screening before it <br> starts.</p>
+          </div><!-- .process -->
+
+          <div class="process">
+            <div class="flow-count">3</div>
+            <h2>Watch Together</h2>
+            <p>Enjoy synchronized <br>viewing and live <br> text chat.</p>
+          </div><!-- .process -->
+        </div><!-- #theFlow -->
+     </div>
+    </section><!-- .page -->
+
+    <section class="page-2">
+      <div class="title">Upcoming Screenings</div>
+      <div class="upcoming-details">
+        <img src="images/movie-thumbnail.png" alt="Movie picture" height="280px" class="movie-thumbnail">
+        <div class="movie-details">
+          <h2>Superman</h2>
+          <p class="movie-date"><span id="year">2025 </span> | <span id="duration">130 </span>min</p>
+
+          <p class="movie-plot">Superman, a journalist in Metropolis, embarks on a journey to <br> reconcile his Kryptonian heritage with his human human upbringing as<br> Clerk Kent.</p>
+
+          <p class="read-more"><a href="#">Read more...</a></p>
+        </div><!-- .movie-details -->
+      </div><!-- .upcoming-details -->
+    </section><!-- .page-2 -->
+  </main>
+  <footer>
+    <small>Copyright &#169; 2025 BingeBuddy | Designed By Team Studio X</small>
+  </footer>
 </body>
 </html>
