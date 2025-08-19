@@ -1,0 +1,252 @@
+
+/*Font family inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --font-color: #ffffff;
+  --brand-gold: #ffd700;
+  --brand-red: #e50914;
+  --brand-black: #141414;
+  --screen: #5B5B5B;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--brand-black);
+  color: var(--font-color);
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.cinema-container {
+  display: flex;
+  height: 100vh;
+}
+
+.video-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: var(--brand-black);
+}
+
+.video-header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--brand-gold);
+}
+
+.cinema-title {
+  color: var(--brand-gold);
+}
+
+.sync-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.sync-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00ff00;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--brand-black);
+  position: relative;
+}
+
+.video-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-controls {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-display {
+  font-family: monospace;
+  color: #fff;
+}
+
+.voice-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.voice-btn {
+  background: var(--brand-gold);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.voice-btn.muted {
+  background: var(--screen);
+}
+
+.chat-section {
+  flex: 1;
+  background: #161b22;
+  border-left: 2px solid var(--screen);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  height: 65%;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.message {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--brand-gold);
+}
+
+.message-user {
+  font-weight: 600;
+  color: var(--brand-gold);
+  font-size: 0.9rem;
+}
+
+.message-text {
+  color: #c9d1d9;
+  line-height: 1.4;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 1rem;
+  border-top: 1px solid #30363d;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-text-input {
+  flex: 1;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.chat-text-input:focus {
+  outline: none;
+  border-color: var(--brand-gold);
+}
+
+.send-btn {
+  background: var(--brand-gold);
+  border: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.send-btn:hover{
+    background-color: var(--brand-red);
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid var(--brand-gold);
+  color: var(--brand-gold);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #333;
+  border-top: 3px solid var(--brand-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .cinema-container {
+    flex-direction: column;
+  }
+
+  .chat-section {
+    width: 100%;
+    height: 40%;
+  }
+}

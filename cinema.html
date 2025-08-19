@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Cinema - Live Viewing</title>
+    <link rel="stylesheet" href="styles/cinema.css" />
+</head>
+
+<body>
+    <div class="cinema-container">
+        <div class="video-section">
+            <div class="video-header">
+                <div>
+                    <button class="back-btn" onclick="goBack()">← Back to Movies</button>
+                </div>
+                <div class="sync-status">
+                    <div class="sync-indicator"></div>
+                    <span id="viewerCount">0</span>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <div id="clickOverlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10;">
+                </div>
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="spinner"></div>
+                    <div>Synchronizing with live stream...</div>
+                </div>
+                <div id="videoFrame" class="video-frame"></div>
+            </div>
+
+            <div class="video-controls">
+                <div class="time-display" id="timeDisplay">
+                    Loading...
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-messages" id="chatMessages">
+            </div>
+
+            <div class="chat-input">
+                <div class="input-group">
+                    <input type="text" class="chat-text-input" id="chatInput" placeholder="Type a message..."
+                        onkeypress="handleChatKeyPress(event)" />
+                    <button class="send-btn" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="Js/cinema.js"></script>
+</body>
+
+</html>
