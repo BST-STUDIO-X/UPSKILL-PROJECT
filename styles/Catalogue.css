@@ -381,18 +381,19 @@ body {
 .discover-label h2{
   color: var(--brand-black);
   font-size: 16px;
+  padding-left: 30px;
 }
 
 
 .select_div{
-    width: 70%;
+    width: 80%;
     height: inherit;
     background-color: #E6E6E6;
     display: flex;
     justify-content: end;
     gap: 20px;
     background-image: linear-gradient(315deg,   transparent 75.1%, var(--brand-gold) 70%);
-    padding-top: 10px;
+    padding: 10px 10px 0 10px;
 }
 
 select {
@@ -412,53 +413,85 @@ select {
 
 @media (max-width: 768px) {
   .discover {
-   flex-direction: column;
     height: auto;
   }
 
   .discover-label {
-    width: 100%;
+    width: 60%;
     height: 50px;
     padding-left: 0px;
     padding-top: 10px;
     font-size: 14px;
     padding-left: 30px;
-    background-image: linear-gradient(150deg, transparent 78.1, #E6E6E6 70%);
+    background-image: linear-gradient(148deg,   transparent 80%, #E6E6E6 70%);
   }
 
   .select_div {
-    width: 100%;
+    width: 40%;
     height: 30px;
     justify-content: center;
-    padding-right: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 10 0px 20px;
+    background-image: none;
   } 
 
   select {
     display: flex;
     flex-direction: row;
-    width: 40%;
-    font-size: 1.0rem;
+    width: 45%;
+    font-size: 0.8rem;
     height: 30px;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width:620px) {
+
+  .discover{
+    height: 50px;
+  }
   .discover-label {
-    width: 50%;
-    font-size: 12px;
+    width: 60%;
+    height: 50px;
+    padding-left: 0px;
+    padding-top: 10px;
+    font-size: 14px;
     padding-left: 30px;
-    background-image: linear-gradient(135deg, transparent 78.1%, #E6E6E6 70%);
+    background-image: linear-gradient(140deg,   transparent 80%, #E6E6E6 70%);
+  }
+
+  .discover-label h2{
+    font-size: 10px;
+  }
+    select {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    font-size: 0.5rem;
+    height: 30px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .discover{
+    height: 100%;
+    padding: 0px;
+    flex-direction: column;
+  }
+  .discover-label {
+    width: 100%;
+    font-size: 12px;
   }
  
   .select_div{
-    width: 50%;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
   }
   select {
-    width: 100%;
-    font-size: 0.2rem;
-    height: 28px;
+    width: 40%;
+    font-size: 0.6rem;
+    height: 40px;
+    padding: 5px;
   }
 }
 
