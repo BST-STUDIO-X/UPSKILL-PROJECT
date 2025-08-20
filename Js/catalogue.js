@@ -26,7 +26,6 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-
 // for movie catalogue 
 const movies = [
   {
