@@ -1,0 +1,484 @@
+/* body {
+  background-image: url(firstone.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+} */
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+   url("./firstone.jpg") no-repeat center center/cover;
+  color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center; /* aligns text + image in the middle */
+  gap: 1px; /* space between them */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 28px; /* resize so it matches text height */
+  height: 28px; /* fix height */
+  object-fit: contain; /* keeps logo from stretching */
+}
+
+.design {
+  top: 15.71px;
+  left: 1558.49px;
+  rotate: -60.6;
+  float: right;
+}
+.pic {
+  text-align: right;
+  margin-top: 1px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third h2 {
+  text-align: center;
+}
+.textarea {
+  background: transparent; /*for the textarea background*/
+  border-radius: 5px;
+  padding: 1px;
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+  color: #fff;
+  font-family: sans-serif;
+  margin-left: 50px;
+  justify-content: center;
+}
+
+.mgSocial {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social {
+  width: 20px;
+  border: 1px solid rgba(77, 77, 77, 1);
+  padding: 5px 30px 5px 30px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* space between box and text */
+  cursor: pointer;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+/* remove default checkbox style */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  background-color: red; /* default red background */
+  border: 1px solid white;
+  position: relative;
+  cursor: pointer;
+}
+
+/* when checked → white tick appears */
+.custom-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+form {
+  width: 100%;
+}
+
+.btn_logIn {
+  background: black;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.log {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: white;
+  text-decoration-line: none;
+}
+.log:hover {
+  color: yellow;
+  cursor: pointer;
+}
+.line-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.line-with-text hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.line-with-text span {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white; /* text color */
+  font-weight: bold;
+  margin: 20px 0;
+  width: 55%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid white; /* line style */
+}
+
+.divider::before {
+  margin-right: 10px;
+}
+
+.divider::after {
+  margin-left: 10px;
+}
+.anchor:hover {
+  background: black;
+  color: white;
+}
+.anchor:active {
+  color: yellow;
+}
+.anchor {
+  color: yellow;
+  text-decoration: none;
+}
+.options {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.rema {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+.contact {
+  color: white;
+  text-align: right;
+  text-decoration: none;
+}
+.time {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 100px;
+  margin-top: 40px;
+}
+
+/* Mobile Screen */
+
+@media (max-width: 1440px) {
+
+  .brand{
+    font-size: 30px;
+  }
+  .third h2 {
+    font-size: 50px;
+    font-family: sans-serif;
+  }
+
+  .third p {
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .textarea {
+    width: 100%;
+    font-size: 40px;
+  }
+
+
+}
+
+  .rema {
+    font-size: 35px;
+  }
+
+  .remember-me {
+    font-size: 35px;
+  }
+
+  .btn_logIn {
+    width:60%;
+    padding: 10px;
+  }
+
+  .log {
+    font-size: 25px;
+  }
+
+  .divider{
+    width: 60%;
+  }
+  .mgSocial{
+    gap: 100px;
+  }
+
+  
+  .account {
+    font-size: 30px;
+  }
+
+  .contact {
+    font-size: 30px;
+  }
+
+
+ @media (max-width: 768px) {
+  .third h2 {
+    font-size: 25px;
+    font-family: sans-serif;
+  }
+
+  .third p {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    
+  }
+
+  .textarea {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .rema {
+    font-size: 20px;
+  }
+
+  .remember-me {
+    font-size: 20px;
+  }
+
+  .btn_logIn {
+    width:70%;
+    padding: 10px;
+  }
+
+  .log {
+    font-size: 14px;
+  }
+
+  .divider{
+    width: 67%;
+  }
+  .mgSocial{
+    gap: 71px;
+  }
+
+  
+  .account {
+    font-size: 10px;
+  }
+
+  .contact {
+    font-size: 10px;
+  }
+}
+
+ @media (max-width: 425px) { 
+  .container {
+    padding: 20px;
+  }
+  .third h2 {
+    font-size: 25px;
+    font-family: sans-serif;
+  }
+
+  .third p {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .textarea {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .rema {
+    font-size: 13px;
+  }
+
+  .remember-me {
+    font-size: 20px;
+  }
+
+  .btn_logIn {
+    width: 80%;
+    padding: 5px;
+  }
+
+  .log {
+    font-size: 14px;
+  }
+.divider{
+  width: 83%;
+}
+  .account {
+    font-size: 15px;
+  }
+
+  .contact {
+    font-size: 15px;
+  }
+} */
+
+ @media (max-width:375px) {
+  
+  .container {
+    padding: 20px;
+  }
+
+  .third h2 {
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  .third p {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .brand{
+    font-size: 15px;
+  }
+
+  .textarea {
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .rema {
+    font-size: 15px;
+  }
+
+  .remember-me {
+    font-size: 15px;
+  }
+
+  .mgSocial{
+    gap: 50px;
+  }
+  .btn_logIn {
+    width: 100%;
+    padding: 7px;
+  }
+
+  .log {
+    font-size: 14px;
+  }
+
+  .account {
+    font-size: 15px;
+  }
+
+  .contact {
+    font-size: 15px;
+  }
+} 
+
+@media (max-width: 320px) {
+  .container {
+    padding: 20px;
+  }
+  .third h2 {
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+
+  .third p {
+    font-size: 10px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .textarea {
+    width: 100%;
+  }
+
+  .rema {
+    font-size: 10px;
+  }
+
+  .remember-me {
+    font-size: 10px;
+  }
+
+  .btn_logIn {
+    width: 100%;
+    padding: 7px;
+  }
+  .mgSocial{
+    gap: 30px;
+  }
+
+  .log {
+    font-size: 14px;
+  }
+
+  .divider{
+    width: 90%;
+  }
+
+  .account {
+    font-size: 13px;
+  }
+
+  .contact {
+    font-size: 13px;
+  }
+}

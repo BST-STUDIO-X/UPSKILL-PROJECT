@@ -1,0 +1,143 @@
+body{
+    background-image: url("second\ background.png");
+    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: black;
+  color: white;
+}
+.brand{
+    display: flex;
+  align-items: center;   /* aligns text + image in the middle */
+  gap: 1px;              /* space between them */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo{
+    width: 28px;           /* resize so it matches text height */
+  height: 28px;          /* fix height */
+  object-fit: contain;   /* keeps logo from stretching */
+
+}
+.design{
+    top: 15.71px;
+  left: 1558.49px;
+  rotate: -60.6;
+  float: right;
+}
+.container{
+    text-align: center;
+}
+.paragraph{
+    text-align: center;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+.textarea{
+    background: transparent; /*for the textarea background*/
+  border-radius: 5px;
+  padding: 5px;
+  width: 74%;
+  margin-right: 50px;
+  margin-bottom: 15px;
+  margin-left: 80px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white; /* text color */
+  font-weight: bold;
+  margin: 20px 0;
+  width: 50%;
+  justify-content: center;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid white; /* line style */
+}
+
+.divider::before {
+  margin-right: 10px;
+}
+
+.divider::after {
+  margin-left: 10px;
+}
+  
+
+.mgSocial {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social {
+  width: 20px;
+  border: 1px solid rgba(77, 77, 77, 1);
+  padding: 5px 30px 5px 30px;
+}
+
+.contact{
+  color: white;
+  text-align: right;
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  margin-top: 50px;
+  display: flex;
+  
+}
+
+.anchor:hover{
+  background: black;
+  color:white;
+}
+.anchor:active{
+  color:yellow;
+}
+.anchor{
+  color: yellow;
+  text-decoration:none;}
+
+  /* media query */
+
+  @media(max-width:768px){
+
+    .brand{
+      font-size: 15px;
+    }
+
+
+    p{
+      font-size:20px ;
+      text-align: center;
+      justify-content: center;
+    }
+    
+    .textarea{
+      size: 25px;
+      font-size: 20px;
+    }
+
+    .divider{
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      width: 100%;
+      size-adjust: 5px;
+        }
+  }
