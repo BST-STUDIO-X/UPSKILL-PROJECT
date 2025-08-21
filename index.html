@@ -7,19 +7,19 @@
   <title>BingeBuddy | Stream Your Favorite Shows, Movies and Drama With Family and Friends</title>
   
   <!-- CUSTOM CSS-->
-   <link rel="stylesheet" type="text/css" href="styles/index.css">
+   <link rel="stylesheet" type="text/css" href="styles/index.css" type="text/css">
 </head>
 <body>
-  <header id="header">
-    <a href="index.html"><img src="images/brandlogo.svg" alt="BingeBuddy" id="brand"></a>
-    <nav id="navLinks">
-      <ul>
-        <li><a href="signup.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><button>Watch Now!</li>
-      </ul>
-    </nav>
-  </header>
+    <header id="header">
+  <a href="index.html"><img src="images/brandlogo.svg" alt="BingeBuddy Logo" id="brand"></a>
+  <nav id="navLinks">
+    <ul>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Register</a></li>
+    </ul>
+  </nav>
+  <div class="toggler"><img src="images/ci_hamburger-lg.png" alt="Menu Toggle"></div>
+</header>
 
   <main>
     <section id="homePage" class="page">
@@ -50,42 +50,35 @@
         <div class="title">How it Works</div>
         <div id="theFlow">
           <div class="process">
-            <div class="flow-count">1</div>
+            <p class="flow-count">1</p>
             <h2>Pick a Screening</h2>
-            <p>Browse the public <br>virtual cinema <br> schedule.</p>
+            <p class="text_process">Browse the public <br>virtual cinema <br> schedule.</p>
           </div><!-- .process -->
 
           <div class="process">
-            <div class="flow-count">2</div>
+            <p class="flow-count">2</p>
             <h2>Join the Room</h2>
-            <p>Click to enter the <br>screening before it <br> starts.</p>
+            <p class="text_process">Click to enter the <br>screening before it <br> starts.</p>
           </div><!-- .process -->
 
           <div class="process">
-            <div class="flow-count">3</div>
+            <p class="flow-count">3</p>
             <h2>Watch Together</h2>
-            <p>Enjoy synchronized <br>viewing and live <br> text chat.</p>
+            <p class="text_process">Enjoy synchronized <br>viewing and live <br> text chat.</p>
           </div><!-- .process -->
         </div><!-- #theFlow -->
      </div>
-    </section><!-- .page -->
-
-    <section class="page-2">
-      <div class="title"><a href="moviecatalogue.html">Upcoming Streamings</a></div>
-      <div class="upcoming-details">
-        <img src="images/movie-thumbnail.png" alt="Movie picture" height="280px" class="movie-thumbnail">
-        <div class="movie-details">
-          <h2>Superman</h2>
-          <p class="movie-date"><span id="year">2025 </span> | <span id="duration">130 </span>min</p>
-
-          <p class="movie-plot">Superman, a journalist in Metropolis, embarks on a journey to <br> reconcile his Kryptonian heritage with his human human upbringing as<br> Clerk Kent.</p>
-          <p class="read-more"><a href="#">Read more...</a></p>
-        </div><!-- .movie-details -->
-      </div><!-- .upcoming-details -->
-    </section><!-- .page-2 -->
+    </section>
+      <section class="page2">
+          <div class="title"><a href="moviecatalogue.html">Upcoming Streamings</a></div>
+        <div class="movie-list" id="movieList">
+        <!-- Cards will be added dynamically -->
+       </div>
+      </section>
   </main>
   <footer>
     <small>Copyright &#169; 2025 BingeBuddy | Designed By Team Studio X</small>
   </footer>
+  <script src="Js/index.js"></script>
 </body>
 </html>

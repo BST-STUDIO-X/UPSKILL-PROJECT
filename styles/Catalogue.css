@@ -21,7 +21,7 @@ body {
 }
 
 /* nav  */
-.header {
+.myheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,26 +31,24 @@ body {
     right: 0;
     height: 80px;
     z-index: 99;
-    padding: 0 20px;
+    margin-left: 20px;
     box-sizing: border-box;
 }
 
-#brand {
+#brandimg {
     max-width: 250px;
     width: 100%;
     height: auto;
-    padding: 10px 20px;
 }
-
 .log_out a {
     color: #ffffff;
     display: flex;
-    align-items: center;
+    justify-content: left;
     padding: 0 20px;
 }
 
 .log_out img {
-    width: 34px;
+    width: 30px;
     height: auto;
     filter: brightness(0) invert(1);
 }
@@ -606,17 +604,6 @@ select {
   transform: translateY(-2px);
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80px;
-  background-color: #000000;
-  color: var(--font-color);
-  text-align: center;
-  font-size: 0.9rem;
-}
-
 @media (max-width: 960px) {
   .movie-card {
     flex-direction: column;
@@ -700,4 +687,15 @@ footer {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: #000000;
+  color: var(--font-color);
+  text-align: center;
+  font-size: 0.9rem;
 }
