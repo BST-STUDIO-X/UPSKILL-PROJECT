@@ -584,9 +584,7 @@ function showFilteredMovies(movieList) {
     let card = document.createElement("div");
     card.className = "movie-card";
     card.innerHTML = `
-      <a href="${movieList[i].watchLink}" target="_blank" class="poster">
         <img src="${movieList[i].poster}" alt="${movieList[i].title}" class="poster_img">
-      </a>
       <div class="details_div">
         <h2>${movieList[i].title}</h2>
         <p>${movieList[i].year} | ${movieList[i].genre} | ${movieList[i].runtime}</p>

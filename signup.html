@@ -4,47 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6ced4e1a7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/signup.css" type="text/css">
     <title>Sign Up</title>
 </head>
 <body>
+    <img src="images/brandlogo.svg" alt="BingeBuddy Logo" id="brand">
+        <div class="uplivello"><img src="images/livello.png" alt="" srcset=""></div>
     <div class="container">
-        <h1>Create Account</h1>
+        <h1>Register</h1>
+        <p class="quote">Ready to unlock an unbeatable streaming experience personalized just for you? Fill in the details below, and let the journey begin!</p>
         
         <div id="successMessage" class="success-message">
-            Account created successfully! A verification email has been sent. Please check your inbox.
         </div>
         
         <form id="signupForm">
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" required>
-                <div id="usernameError" class="error-message">Username must be at least 4 characters</div>
+                <fieldset>
+                    <legend>
+                      Username
+                    </legend>
+                    <input type="text" name="username-or-email" id="username" required placeholder="muffinworks@gmail.com">
+                <div id="usernameError" class="error-message"></div>
+                </fieldset>
             </div>
-            
+
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" required>
-                <div id="passwordError" class="error-message">
-                    Password must be at least 8 characters and contain at least one number
+               <div class="password_container">
+                    <input type="password" name="password" id="password" required placeholder="password" class="password_input">
+                    <i class="fa-solid fa-eye" id="togglePassword"></i>
+                     <div id="passwordError" class="error-message"></div>
+                </div>
+           </div>
+
+            <div class="form-group">
+                <div class="password_container">
+                      <input type="password" id="confirmPassword" required placeholder="confirm password" class="password_input">
+                      <i class="fa-solid fa-eye" id="toggleconfirmPassword"></i>
+                       <div id="confirmPasswordError" class="error-message"></div>
                 </div>
             </div>
             
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" required>
-                <div id="confirmPasswordError" class="error-message">Passwords do not match</div>
-            </div>
-            
-            <button type="submit" id="signupButton">Sign Up</button>
+            <button type="submit" id="signupButton">Register</button>
             <div id="successMessage"></div>
         </form>
+
+        <div class="or">or</div>
+
+        <div class="social-group">
+            <img src="/images/google.png" alt="facebook" class="socials-logo">
+            <img src="/images/facebook.png" alt="google" class="socials-logo">
+            <img src="/images/apple.png" alt="apple" class="socials-logo">
+        </div>
         
         <div class="login-link">
-            Already have an account? <a href="login.html">Log in</a>
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+
+            <p><a href="#">Contact support</a></p>
         </div>
     </div>
-
+     <div class="downlivello"><img src="images/livello.png" alt="" srcset=""></div>
     <script src="Js/signupandlogin.js"></script>
 </body>
 </html>
