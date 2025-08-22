@@ -1,6 +1,28 @@
+
+// toggle password 
+const inputPassword = document.getElementById('password');
+const togglePassword = document.getElementById('togglePassword');
+const confirmPassword = document.getElementById('confirmPassword');
+const toggleconfirmPassword = document.getElementById('toggleconfirmPassword');
+
+// Password toggle
+togglePassword.addEventListener('click', function () {
+    const type = inputPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPassword.setAttribute('type', type);
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+});
+
+// Confirm password toggle
+toggleconfirmPassword.addEventListener('click', function () {
+    const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmPassword.setAttribute('type', type);
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+});
+
+
 // sign up 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Form elements
 const signupForm = document.getElementById('signupForm');
@@ -77,6 +99,9 @@ const signupForm = document.getElementById('signupForm');
             if (response) {
                 successMessage.textContent = "You have successfully registered, proceed to login";
                 successMessage.style.display = "block";
+                  setTimeout(() => {
+                    window.location.href = 'login.html'; 
+                }, 2000);
             }
         } catch (error) {
             usernameError.textContent = error.message;
@@ -90,8 +115,6 @@ const signupForm = document.getElementById('signupForm');
 
 
 // log in validation
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("loginForm");
     const usernameInput = document.getElementById("username");
@@ -166,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Optionally redirect or store token
                 // Redirect to landing page after a short delay
                 setTimeout(() => {
-                    window.location.href = 'index.html'; // Adjust path as needed
+                    window.location.href = 'moviecatalogue.html'; // 
                 }, 2000);
             }
         } catch (error) {

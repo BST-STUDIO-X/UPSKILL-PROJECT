@@ -111,6 +111,10 @@ li a {
 }
 
 @media screen and (max-width: 800px) {
+  #header{
+     background-color: #000000;
+  }
+
   .toggler {
     display: block;
   }
@@ -237,25 +241,12 @@ li a {
 /* how it works  */
 .page {
   max-width: 100%;
-  background-color: #E6E6E6;
-  position: relative;
+  background-color: #e6e6e6;
   height: auto;
-}
-
-.page::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(rgba(241, 240, 240, 0.9)), url('/images/mobileauthbg.jpg')no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.1;
-  z-index: -1;
-  background-image: url('page img.jpg');
 }
-
 .title {
   text-align: center;
   padding-top: 30px;

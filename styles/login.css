@@ -11,58 +11,96 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f5f5;
+    background: linear-gradient(rgba(12, 12, 12, 0.9)), url('/images/mobileauthbg.jpg')no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+#brand{
+    align-self: flex-start;
+    margin: 40px 40px;
+    height: 36px;
 }
 
 #container {
-    background: white;
-    border-radius: 8px;
+    background: transparent;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
 }
 
-h1 {
+#container h1 {
     text-align: center;
-    color: #333;
-    margin: 0 0 24px;
+    color: var(--font-color);
+    margin: 0 0 14px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+#container p{
+    color: var(--font-color);
+    font-size: 1.2em;
+    text-align: center;
 }
 
-label {
+.uplivello{
+    position: absolute;
+    top: 5%;
+    right: 5%
+}
+
+.form-group{
+    margin-bottom: 40px;
+}
+ fieldset{
+    width: 90%;
+    height: auto;
+    border: 0.6px solid #ffffff;
+}
+
+fieldset legend{
     display: block;
-    margin-bottom: 6px;
     font-weight: 500;
-    color: #555;
+    color: #ffffff;
+}
+
+fieldset input{
+    outline: none;
+    border: none;
 }
 
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
+    background: transparent;
+    outline: none;
+    border: 0.5px solid #b8b4b4;
+    color: var(--font-color);
 }
 
-input:focus {
-    outline: none;
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+
+.password_container input:focus {
+    outline: 0.4px solid var(--font-color);
+    border-color: var(--font-color);
 }
+
+ .password_input{
+   border: 0.9px solid #333;
+} 
+
 
 .error-message {
-    color: #e74c3c;
-    font-size: 14px;
+    color: #621106;
+    font-weight: 500;
+    font-size: 15px;
     margin-top: 5px;
     display: none;
 }
@@ -70,35 +108,93 @@ input:focus {
 button {
     width: 100%;
     padding: 12px;
-    background: #4a90e2;
+    background: #0d0d0e;
     color: white;
     border: none;
     border-radius: 4px;
     font: 500 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
     transition: background 0.3s;
+    margin-bottom: 10px;
 }
 
 button:hover {
-    background: #3a7bc8;
+    background: var(--brand-red);
 }
 
 button:disabled {
     background: #cccccc;
     cursor: not-allowed;
 }
-
 .signup-link {
     text-align: center;
     margin-top: 20px;
-    color: #666;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
 
 .signup-link a {
-    color: #4a90e2;
+    color: var(--brand-gold);
     text-decoration: none;
 }
 
 .signup-link a:hover {
     text-decoration: underline;
 }
+
+.success-message {
+    display: none;
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.password_container{
+    position: relative;
+}
+
+.password_container input[type="password"]{
+    padding-right: 30px;
+}
+
+.password_container i{
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+}
+
+.or{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.social-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials-logo{
+    padding: 10px 40px;
+    border: solid 1px #4D4D4D;
+    height: 25px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: .25s;
+}
+
+.socials-logo:hover{
+    border: solid 1px #ddd;
+    transition: .25s;
+}
+
+  
