@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(12, 12, 12, 0.9)), url('/images/mobileauthbg.jpg')no-repeat;
+    background: linear-gradient(rgba(12, 12, 12, 0.9)), url('https://github.com/BST-STUDIO-X/UPSKILL-PROJECT/blob/main/images/mobileauthbg.jpg')no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0;
