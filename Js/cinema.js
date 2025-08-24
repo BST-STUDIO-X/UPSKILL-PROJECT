@@ -3,8 +3,8 @@ const overlay = document.getElementById('clickOverlay');
 const cinemaId = getVideoIdFromUrl();
 // const API_BASE = 'http://localhost:5000/api/v1';
 const API_BASE = 'https://virtual-cinema-backend.onrender.com/api/v1';
-const authToken =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg5Nzg4M2M0YjcwNDJlNWIxMWY2YjQ4In0sImlhdCI6MTc1NTU0OTIzMSwiZXhwIjoxNzU4MTQxMjMxfQ.lX2E_fka_BV-HBe4vEM8C2FcBD77OjbnVMgvPTlXXUY';
+const authToken = localStorage.getItem('authToken');
+
 let syncCount = 0;
 
 function onYouTubeIframeAPIReady() {

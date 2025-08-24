@@ -20,6 +20,47 @@ body {
   background-image: linear-gradient(150deg, rgba(0, 0, 0, 1)66%, rgb(252, 246, 246)100%) ;
 }
 
+/*Button style*/
+button {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  opacity: 0.88;
+  cursor: pointer;
+  transition: opacity 0.25s;
+
+  height: 64px;
+  width: 189px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+button:hover {
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    padding: 0;
+    border-radius: 8px;
+
+    height: 32px;
+    width: 150px;
+    font-size: 14px;
+  }
+}
+
+.watch-btn {
+  background: linear-gradient(135deg, var(--brand-red), var(--brand-gold));
+  margin-top: 1rem;
+}
+
+.watch-btn:hover {
+  background: linear-gradient(135deg, #ff8c42, #ff6b35);
+  transform: translateY(-2px);
+}
+
 /* nav  */
 .myheader {
     display: flex;
@@ -497,6 +538,19 @@ select {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* movie list  */
 .movie-list {
   width: 100%;
@@ -506,21 +560,21 @@ select {
 }
 
 .movie-card {
-  width: 100%;
-  max-width: 100%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center; 
+  align-items: center;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 0 2rem 0;
+  transition: transform 0.3s ease;
+  font-size: 28px;
 }
 
 .movie-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 5px 5px var(--brand-red);
+  transform: translateX(2px);
+  border: 1px solid var(--brand-gold);
+  border-radius: 8px;
 }
 
 .poster_img {
@@ -532,14 +586,15 @@ select {
 }
 
 .details_div {
-  max-width: 30%;
+  max-width: 50%;
   width: 100%;
   padding: 1rem;
   text-align: left;
+  font-size: 16px;
 }
 
 .details_div h2 {
-  font-size: 2rem;
+  font-size: 48px;
   margin-bottom: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
@@ -547,13 +602,11 @@ select {
 }
 
 .movie_time {
-  font-size: 1rem;
   padding: 1rem 0 0.5rem;
   color: var(--font-color);
 }
 
 .movie_descr {
-  font-size: 1.25rem;
   line-height: 1.5;
   margin-top: 0.5rem;
   overflow: hidden;
@@ -571,7 +624,6 @@ select {
   overflow-wrap: break-word;
   white-space: normal;
   margin-bottom: 0.75rem;
-  font-size: 1.1rem;
 }
 
 .read-more {
@@ -587,33 +639,14 @@ select {
   text-decoration: underline;
   margin-top: 0.5rem;
   display: block;
-  font-size: 1rem;
 }
 
-.watch-btn {
-  background: linear-gradient(135deg, var(--brand-red), var(--brand-gold));
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-  width: 50%;
-  max-width: 200px;
-}
-
-.watch-btn:hover {
-  background: linear-gradient(135deg, #ff8c42, #ff6b35);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .movie-card {
+    font-size: 14px;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
     align-items: stretch; /* Reset to stretch for stacked layout */
   }
 
@@ -625,16 +658,12 @@ select {
   .details_div {
     max-width: 100%;
     padding: 0.5rem;
+    font-size: 14px;
   }
 
   .details_div h2 {
-    font-size: 1.8rem;
     white-space: normal;
-  }
-
-  .watch-btn {
-    width: 60%;
-    max-width: 180px;
+    font-size: 36px;
   }
 }
 
@@ -660,12 +689,6 @@ select {
   .movie_time {
     padding: 0.5rem 0;
   }
-
-  .watch-btn {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.95rem;
-    width: 70%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -685,22 +708,21 @@ select {
   .movie_descr {
     font-size: 0.9rem;
   }
-
-  .watch-btn {
-    width: 100%;
-    max-width: 150px;
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
 }
 
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 100px;
   background-color: #000000;
   color: var(--font-color);
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 28px;
+}
+
+@media (max-width: 990px) {
+  footer {
+    font-size: 14px;
+  }
 }
