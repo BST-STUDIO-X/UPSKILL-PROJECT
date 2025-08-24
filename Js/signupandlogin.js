@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const token = await loginUser(username, password);
       if (token) {
+        localStorage.setItem('authToken', token);
         successMessage.textContent = 'Login successful!';
         successMessage.style.display = 'block';
         // Optionally redirect or store token
