@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>BingeBuddy | Stream Your Favorite Shows, Movies and Drama With Family and Friends</title>
-  
+
   <!-- CUSTOM CSS-->
-   <link rel="stylesheet" type="text/css" href="styles/index.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/index.css" type="text/css">
 </head>
+
 <body>
-    <header id="header">
-  <a href="index.html"><img src="images/brandlogo.svg" alt="BingeBuddy Logo" id="brand"></a>
-  <nav id="navLinks">
-    <ul>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="signup.html">Register</a></li>
-    </ul>
-  </nav>
-  <div class="toggler"><img src="images/ci_hamburger-lg.png" alt="Menu Toggle"></div>
-</header>
+  <header id="header">
+    <a href="index.html"><img src="images/brandlogo.svg" alt="BingeBuddy Logo" id="brand"></a>
+    <nav id="navLinks">
+      <ul>
+        <li>
+          <a href="login.html">
+            <button id="loginCta">
+              Login
+            </button>
+          </a>
+        </li>
+        <li>
+          <a href="signup.html">
+            <button id="registerCta">
+              Register
+            </button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="toggler"><img src="images/ci_hamburger-lg.png" alt="Menu Toggle"></div>
+  </header>
 
   <main>
     <section id="homePage" class="page">
       <div id="container">
-      <div id="title">
-        <h1>WATCH MOVIES TOGETHER,<br>
-        ANYWHERE</h1>
-      </div><!-- #title -->
-      <div class="article">
-        <p>BingeBuddy is your online public cinema. Join live <br> screenings, chat with other viewers and experience <br>files as a shared event.</p></div>
-      <div><!-- .article -->
-        <button class="how-it-works"><a href="#page">How it works</a></button>
-        <button class="watch-now"><a href="login.html">Watch Now!</a></button>
-      </div>
-    </div><!-- #container -->
+        <div id="title">
+          <h1>WATCH MOVIES TOGETHER,<br>
+            ANYWHERE</h1>
+        </div><!-- #title -->
+        <div class="article">
+          <p>BingeBuddy is your online public cinema. Join live <br> screenings, chat with other viewers and experience
+            <br>movies as a shared event.
+          </p>
+        </div>
+        <div><!-- .article -->
+          <button class="how-it-works"><a href="#page">How it works</a></button>
+          <button class="watch-now"><a href="login.html">Watch Now!</a></button>
+        </div>
+      </div><!-- #container -->
     </section><!-- #homePage -->
 
     <section class="sites">
@@ -67,18 +84,19 @@
             <p class="text_process">Enjoy synchronized <br>viewing and live <br> text chat.</p>
           </div><!-- .process -->
         </div><!-- #theFlow -->
-     </div>
+      </div>
     </section>
-      <section class="page2">
-          <div class="title"><a href="login.html">Upcoming Streamings</a></div>
-        <div class="movie-list" id="movieList">
+    <section class="page2">
+      <div class="title"><a href="login.html">Upcoming Streamings</a></div>
+      <div class="movie-list" id="movieList">
         <!-- Cards will be added dynamically -->
-       </div>
-      </section>
+      </div>
+    </section>
   </main>
   <footer>
     <small>Copyright &#169; 2025 BingeBuddy | Designed By Team Studio X</small>
   </footer>
   <script src="Js/index.js"></script>
 </body>
+
 </html>

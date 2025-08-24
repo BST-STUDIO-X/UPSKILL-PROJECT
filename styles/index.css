@@ -1,7 +1,7 @@
 /*Font family inter*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root{
+:root {
   --font-color: #ffffff;
   --brand-gold: #ffd700;
   --brand-red: #e50914;
@@ -9,36 +9,40 @@
 }
 
 /*Reset some default styles*/
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-font-family: Inter, Arial, Helvetica, sans-serif;
-font-size: 15px;
-white-space: nowrap;
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  white-space: nowrap;
 }
 
 /* Links style*/
-a{
+a {
   color: var(--font-color);
   text-decoration: none;
 }
 
 /*Button style*/
-button{
+button {
   padding: 10px 40px;
   border-radius: 20px;
   border: none;
   opacity: 0.88;
   cursor: pointer;
   transition: opacity 0.25s;
-  font-weight: 600;
+
+  height: 64px;
+  width: 189px;
+  font-size: 18px;
+  margin-right: 10px;
 }
 
-button:hover{
+button:hover {
   opacity: 1;
   transition: opacity 0.25s;
 }
@@ -48,7 +52,7 @@ button:hover{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 48px;
   position: fixed;
   left: 0;
   right: 0;
@@ -85,20 +89,34 @@ button:hover{
   align-items: center;
 }
 
-li a {
+/* li a {
   align-items: center;
   border-radius: 5px;
   padding: 10px 20px;
   transition: background-color 0.25s;
   text-decoration: none;
+} */
+
+#loginCta {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--font-color);
 }
 
-#header ul li a:hover {
+#registerCta {
+  background-color: var(--brand-gold);
+  color: var(--brand-black);
+}
+
+#loginCta:hover {
+  border: 1px solid var(--font-color);
+}
+
+/* #header ul li a:hover {
   background-color: var(--brand-gold);
   transition: background-color 0.25s;
   color: var(--brand-black);
   font-weight: bold;
-}
+} */
 
 .toggler {
   display: none;
@@ -110,9 +128,9 @@ li a {
   height: 24px;
 }
 
-@media screen and (max-width: 800px) {
-  #header{
-     background-color: #000000;
+@media screen and (max-width: 768px) {
+  #header {
+    background-color: #000000;
   }
 
   .toggler {
@@ -157,23 +175,31 @@ li a {
     display: block;
     padding: 8px 0;
   }
-}
 
-@media screen and (max-width: 650px) {
-  #header {
+  button {
+    padding: 0;
+    border-radius: 8px;
+
+    height: 32px;
+    width: 150px;
+    font-size: 14px;
+  }
+
+  /* #header {
     padding: 0 10px;
   }
 
   .toggler img {
     width: 30px;
     height: 30px;
-  }
+  } */
 }
 
 /* Main content */
 #homePage {
   padding-top: 180px;
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://bst-studio-x.github.io/UPSKILL-PROJECT/images/home-bc.jpg')no-repeat; /*url is important for github docs pages*/
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('../images/hero-bg.jpg') no-repeat; /*url is important for github docs pages*/
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -183,37 +209,43 @@ li a {
 
 #container {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 2%;
   display: flex;
   flex-direction: column;
-  color: var(--font-color);
+  /* color: var(--font-color); */
 }
 
 #title h1 {
-  font-size: 3em;
-  padding-bottom: 24px;
+  font-size: 64px;
+  margin-bottom: 24px;
   font-weight: 600;
+  color: var(--font-color);
 }
 
 .article p {
-  font-size: 1.2em;
+  font-size: 28px;
   padding-bottom: 24px;
   line-height: 1.5em;
   white-space: normal;
+  color: var(--font-color);
 }
 
 .how-it-works {
-  background-color: var(--brand-gold);
-  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--font-color);
+  border-radius: 12px;
+}
+
+.watch-now a {
+  color: var(--brand-black);
 }
 
 .watch-now {
-  background-color: var(--brand-red);
-  color: var(--font-color);
+  background-color: var(--brand-gold);
+  color: var(--brand-black);
   margin-right: 10px;
 }
-
 
 /* sites  */
 .sites {
@@ -243,7 +275,8 @@ li a {
   max-width: 100%;
   background-color: #e6e6e6;
   height: auto;
-  background: linear-gradient(rgba(241, 240, 240, 0.9)), url('/images/mobileauthbg.jpg')no-repeat;
+  background: linear-gradient(rgba(241, 240, 240, 0.9)),
+    url('/images/mobileauthbg.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -251,7 +284,8 @@ li a {
   text-align: center;
   padding-top: 30px;
   margin-bottom: 60px;
-  font-size: 1.5em;
+  font-size: 28px;
+  margin-right: 48px;
 }
 
 #theFlow {
@@ -318,19 +352,8 @@ li a {
 }
 
 @media (max-width: 1000px) {
-  #title h1 {
-    font-size: 2.5em;
-  }
-
-  .article p {
-    font-size: 1em;
-  }
-
-  .title {
-    font-size: 1.3em;
-  }
-
   #theFlow {
+    flex-direction: column;
     gap: 30px;
     padding: 15px;
   }
@@ -343,49 +366,22 @@ li a {
   }
 }
 
-@media (max-width: 800px) {
-  #title h1 {
-    font-size: 2em;
-  }
-
-  .article p {
-    font-size: 0.9em;
-  }
-
-  #theFlow {
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-  }
-
-  .process {
-    min-height: 200px;
-    max-width: 90%;
-    padding: 20px;
-  }
-
-  .title {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   #container {
     left: 3%;
   }
 
   #title h1 {
-    font-size: 2em;
+    font-size: 36px;
   }
 
   .article p {
-    font-size: 0.85em;
+    font-size: 14px;
     width: 100%;
   }
 
   .title {
-    font-size: 1.1em;
+    font-size: 14px;
     padding-top: 20px;
     margin-bottom: 30px;
   }
@@ -450,10 +446,6 @@ li a {
     font-size: 0.8em;
   }
 
-  .title {
-    font-size: 1em;
-  }
-
   #theFlow {
     padding: 10px;
   }
@@ -480,15 +472,18 @@ li a {
 
 /*Page 2*/
 
-.page2{
-  padding: 30px 40px;
+.page2 {
   height: auto;
-  color: var(--font-color); 
+  /* color: var(--font-color); */
   background-color: var(--brand-black);
-  background-image: linear-gradient(150deg, rgba(0, 0, 0, 1)66%, rgb(252, 246, 246)100%) ;
- } 
+  background-image: linear-gradient(
+    150deg,
+    rgba(0, 0, 0, 1) 66%,
+    rgb(252, 246, 246) 100%
+  );
+}
 
-.page2 .title{
+.page2 .title {
   text-align: right;
   text-decoration: underline;
 }
@@ -503,19 +498,20 @@ li a {
 
 .movie-card {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center; 
+  align-items: center;
   max-width: 90%;
   margin: 0 auto;
-  padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 0 2rem 0;
+  transition: transform 0.3s ease;
+  font-size: 28px;
 }
 
 .movie-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 5px 5px var(--brand-red);
+  transform: translateX(2px);
+  border: 1px solid var(--brand-gold);
+  border-radius: 8px;
 }
 
 .poster_img {
@@ -531,10 +527,11 @@ li a {
   width: 100%;
   padding: 1rem;
   text-align: left;
+  font-size: 16px;
 }
 
 .details_div h2 {
-  font-size: 2rem;
+  font-size: 48px;
   margin-bottom: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
@@ -542,13 +539,11 @@ li a {
 }
 
 .movie_time {
-  font-size: 1rem;
   padding: 1rem 0 0.5rem;
   color: var(--font-color);
 }
 
 .movie_descr {
-  font-size: 1.25rem;
   line-height: 1.5;
   margin-top: 0.5rem;
   overflow: hidden;
@@ -566,7 +561,6 @@ li a {
   overflow-wrap: break-word;
   white-space: normal;
   margin-bottom: 0.75rem;
-  font-size: 1.1rem;
 }
 
 .read-more {
@@ -582,14 +576,14 @@ li a {
   text-decoration: underline;
   margin-top: 0.5rem;
   display: block;
-  font-size: 1rem;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
   .movie-card {
+    font-size: 14px;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 0;
     align-items: stretch; /* Reset to stretch for stacked layout */
   }
 
@@ -601,11 +595,12 @@ li a {
   .details_div {
     max-width: 100%;
     padding: 0.5rem;
+    font-size: 14px;
   }
 
   .details_div h2 {
-    font-size: 1.8rem;
     white-space: normal;
+    font-size: 36px;
   }
 }
 
@@ -652,8 +647,7 @@ li a {
   }
 }
 
-
-footer{
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -661,11 +655,11 @@ footer{
   background-color: #000000;
   color: var(--font-color);
   text-align: center;
+  font-size: 28px;
 }
 
-
-
-
-
-
-
+@media (max-width: 990px) {
+  footer {
+    font-size: 14px;
+  }
+}
