@@ -534,7 +534,7 @@ function showAllMovies() {
         </p>
         <div class="full-descr" id="full-descr-${movies[i].id}" style="display: none;">
           <p>${movies[i].description}</p>
-          <button class="watch-btn" onclick="watchMovie('${movies[i].id}')">Join Virtual Cinema</button>
+          <button class="watch-btn" onclick="watchMovie('${movies[i].id}')">Join</button>
         </div>
         <a href="#" class="read-more" onclick="toggleDescription('${movies[i].id}'); return false;">Read more...</a>
       </div>
@@ -593,7 +593,7 @@ function showFilteredMovies(movieList) {
         </p>
         <div class="full-descr" id="full-descr-${movieList[i].id}" style="display: none;">
           <p>${movieList[i].description}</p>
-          <button class="watch-btn" onclick="watchMovie('${movieList[i].id}')">Join Virtual Cinema</button>
+          <button class="watch-btn" onclick="watchMovie('${movieList[i].id}')">Join</button>
         </div>
         <a href="#" class="read-more" onclick="toggleDescription('${movieList[i].id}'); return false;">Read more...</a>
       </div>
